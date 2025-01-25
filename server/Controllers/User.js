@@ -34,6 +34,7 @@ export const signupController = async(req,res)=>{
     
     try {
      const {name,email,password} = req.body;
+     console.log(name,email,password);
      
     
       

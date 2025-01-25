@@ -1,14 +1,21 @@
+import React from "react";
+import {BrowserRouter,Route, Routes} from "react-router-dom"
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import DashBoard from "./components/DashBoard";
+import Task from "./components/Task";
 
-import './App.css'
+const Home = () => {
+  return <>
+    <BrowserRouter>
+      <Routes>
+         <Route path="/login" element={<Login/>} />
+         <Route path="/signup" element={<SignUp/>} />
+         <Route path="/" element={<DashBoard/>} />
+         <Route path="/task" element={<Task/>} />
+      </Routes>
+    </BrowserRouter>
+  </>
+};
 
-function App() {
-
-
-  return (
-    <>
-      <b>HII there</b>
-    </>
-  )
-}
-
-export default App
+export default Home;

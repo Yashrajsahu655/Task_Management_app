@@ -3,11 +3,15 @@ import dotenv from 'dotenv';
 import connectdb from './db.js';
 import userRoutes from "./Routes/User.js"
 import taskRoutes from './Routes/Task.js'
+import cors from 'cors'
+import bodyParser from 'body-parser';
 
 const app = express();
 dotenv.config();
 connectdb();
 
+app.use(cors());
+app.use(bodyParser.json());
 app.use(express.json());
 app.use('/user',userRoutes);
 app.use('/task',taskRoutes);
