@@ -25,7 +25,7 @@ const SignUp = () => {
         console.log(formData);
         
       const response = await axios.post(
-        "http://localhost:3000/user/signup",
+        "https://task-management-app-6wg6.onrender.com/user/signup",
         formData
       );
       console.log(response);

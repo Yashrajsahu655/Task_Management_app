@@ -10,7 +10,7 @@ const Hero = () => {
       try {
           async function getTask(){
               const token = localStorage.getItem('jwtToken');
-              const response = await axios.get("http://localhost:3000/dashboard", {
+              const response = await axios.get("https://task-management-app-6wg6.onrender.com/dashboard", {
                   headers: {
                     Authorization: `Bearer ${token}`,
                   },

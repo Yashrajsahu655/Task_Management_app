@@ -9,7 +9,7 @@ const Card = ({ item }) => {
   const HandleClick = async () => {
     try {
      const token = localStorage.getItem('jwtToken');
-      const response = await axios.delete(`http://localhost:3000/task/deleteTask/${item._id}`, {
+      const response = await axios.delete(`https://task-management-app-6wg6.onrender.com/task/deleteTask/${item._id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
