@@ -31,8 +31,8 @@ export const newTask = async (req, res, next) => {
             description,
             user: new mongoose.Types.ObjectId(userId),
             priority,
-            startTime: parsedStartTime,
-            endTime: parsedEndTime,
+            startTime: startTime,
+            endTime: endTime,
         }
         );
 
