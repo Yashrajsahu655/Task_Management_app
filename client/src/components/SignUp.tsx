@@ -24,11 +24,14 @@ const SignUp = () => {
     try {
         console.log(formData);
         
-      const { data } = await axios.post(
+      const response = await axios.post(
         "http://localhost:3000/user/signup",
         formData
       );
-      console.log(data);
+      console.log(response);
+
+      const { token } = response.data;
+      localStorage.setItem('jwtToken', token);
       navigate("/");
     } catch (err: any) {
       alert(

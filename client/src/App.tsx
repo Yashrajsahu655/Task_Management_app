@@ -13,6 +13,7 @@ const Home = () => {
          <Route path="/signup" element={<SignUp/>} />
          <Route path="/" element={<DashBoard/>} />
          <Route path="/task" element={<Task/>} />
+         
       </Routes>
     </BrowserRouter>
   </>

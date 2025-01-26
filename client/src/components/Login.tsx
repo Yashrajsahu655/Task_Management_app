@@ -14,8 +14,11 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:3000/user/login", formData);
-      console.log(data);
+      const response  = await axios.post("http://localhost:3000/user/login", formData);
+      console.log(response);
+
+      const { token } = response.data;
+      localStorage.setItem('jwtToken', token);
       navigate("/");
     } catch (err: any) {
       alert(err.response?.data?.message || "An error occurred");
