@@ -1,10 +1,7 @@
 import axios from "axios";
-import React from "react";
-import Edit from "./Edit";
-import { useNavigate } from "react-router-dom";
 
 const Card = ({ item }) => {
-  const navigate = useNavigate();
+  
 
   const HandleClick = async () => {
     try {
